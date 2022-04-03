@@ -18,12 +18,14 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
 
 // css
 import "./../styles/ms.css"
+
+// MUI
 import { Typography } from '@mui/material';
 
 
 const searchClient = instantMeiliSearch(
-    `${process.env.REACT_APP_API_URL}`,
-    `${process.env.REACT_APP_API_KEY}`
+    process.env.REACT_APP_API_URL,
+    process.env.REACT_APP_API_KEY
 );
 
 const Meilisearch = () => (

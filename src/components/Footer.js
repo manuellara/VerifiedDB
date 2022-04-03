@@ -40,12 +40,12 @@ export default function Footer() {
                 <Grid item xs={12} sm={4}>
                     <Box borderBottom={1}>
                         <Typography variant='h6'>
-                            How
+                            Contribute
                         </Typography>
                     </Box>
 
                     <Box>
-                        <Link color="inherit" target="_blank" href="https://www.buymeacoffee.com/manuellara">
+                        <Link color="inherit" target="_blank" href="">
                             Submit a user
                         </Link>
                     </Box>
