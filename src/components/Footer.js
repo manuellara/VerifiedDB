@@ -29,12 +29,6 @@ export default function Footer() {
                             About
                         </Link>
                     </Box>
-
-                    <Box>
-                        <Link color="inherit">
-                            FAQ
-                        </Link>
-                    </Box>
                 </Grid>
 
                 <Grid item xs={12} sm={4}>
@@ -47,6 +41,12 @@ export default function Footer() {
                     <Box>
                         <Link color="inherit" target="_blank" href="">
                             Submit a user
+                        </Link>
+                    </Box>
+
+                    <Box>
+                        <Link color="inherit">
+                            Requirements
                         </Link>
                     </Box>
                 </Grid>

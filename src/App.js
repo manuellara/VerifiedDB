@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material";
 
 // pages
 import HomePage from "./pages/HomePage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </>

@@ -12,7 +12,8 @@ import {
     Snippet,
     SortBy,
     RefinementList,
-    Configure
+    Configure,
+    Stats
 } from 'react-instantsearch-dom';
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
 
@@ -45,12 +46,12 @@ const Meilisearch = () => (
                                 label: "Default"
                             },
                             {
-                                value: "verified:last_name:desc",
-                                label: "Last Name Descending"
+                                value: "verified:name:desc",
+                                label: "Name Descending"
                             },
                             {
-                                value: "verified:last_name:asc",
-                                label: "Last Name Ascending"
+                                value: "verified:name:asc",
+                                label: "Name Ascending"
                             }
                         ]
                     }
@@ -69,6 +70,8 @@ const Meilisearch = () => (
             <div className="right-panel">
                 <SearchBox />
 
+                <Stats/>
+                
                 <Hits hitComponent={Hit} />
 
                 <Pagination showLast={true} />
@@ -81,21 +84,15 @@ const Meilisearch = () => (
 
 const Hit = ({ hit }) => (
 
-    <div key={hit.id}>
+    <div key={hit.id} onClick={() => console.log(hit.id)}>
 
         <div>
             <Typography variant='h6'>
-                <Highlight attribute="first_name" hit={hit} />
-                {" "}
-                <Highlight attribute="last_name" hit={hit} />
+                <Highlight attribute="name" hit={hit} />
             </Typography>
         </div>
 
         <img src={hit.poster} alt="alt-img-name" />
-
-        <div>
-            alias: <Highlight attribute="alias" hit={hit} />
-        </div>
 
         <div>
             twitter: <Highlight attribute="twitter" hit={hit} />
