@@ -71,7 +71,7 @@ const Meilisearch = () => (
                 <SearchBox />
 
                 <Stats/>
-                
+
                 <Hits hitComponent={Hit} />
 
                 <Pagination showLast={true} />
