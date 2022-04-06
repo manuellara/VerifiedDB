@@ -20,7 +20,7 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
 // css
 import "./../styles/ms.css"
 
-// MUI
+// MUI 5 
 import { Typography } from '@mui/material';
 
 
@@ -32,25 +32,25 @@ const searchClient = instantMeiliSearch(
 const Meilisearch = () => (
 
     <div className="ais-InstantSearch">
-        <InstantSearch indexName="verified" searchClient={searchClient}>
+        <InstantSearch indexName="verified-rcd" searchClient={searchClient}>
 
             <div className="left-panel">
                 <ClearRefinements />
 
                 <SortBy
-                    defaultRefinement="verified"
+                    defaultRefinement="verified-rcd"
                     items={
                         [
                             {
-                                value: "verified",
+                                value: "verified-rcd",
                                 label: "Default"
                             },
                             {
-                                value: "verified:name:desc",
+                                value: "verified-rcd:name:desc",
                                 label: "Name Descending"
                             },
                             {
-                                value: "verified:name:asc",
+                                value: "verified-rcd:name:asc",
                                 label: "Name Ascending"
                             }
                         ]
@@ -103,7 +103,7 @@ const Hit = ({ hit }) => (
         </div>
 
         <div className="hit-description">
-            <Snippet attribute="description" hit={hit} />
+            { hit.description == null ? "" : <Snippet attribute="description" hit={hit} /> }
         </div>
 
     </div>

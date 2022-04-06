@@ -68,7 +68,7 @@ export default function Footer() {
             </Grid>
 
             <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-                Lara Laboratories &reg; {new Date().getFullYear()}
+                Verified Database &reg; {new Date().getFullYear()}
             </Box>
 
         </Box>

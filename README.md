@@ -6,7 +6,7 @@ This project was built using:
 - DigitalOcean
 
 ## Purpose
-A database/search engine for verified accounts across all social media
+A database/search engine for verified accounts across all social media (frontend only)
 
 <br />
 
