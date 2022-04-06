@@ -95,11 +95,11 @@ const Hit = ({ hit }) => (
         <img src={hit.poster} alt="alt-img-name" />
 
         <div>
-            twitter: <Highlight attribute="twitter" hit={hit} />
+            twitter: { hit.twitter == null ? "" : <Highlight attribute="twitter" hit={hit} /> }
         </div>
 
         <div>
-            instagram: <Highlight attribute="instagram" hit={hit} />
+            instagram: { hit.instagram == null ? "" : <Highlight attribute="instagram" hit={hit} /> }
         </div>
 
         <div className="hit-description">
